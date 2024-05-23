@@ -69,8 +69,3 @@ function highlightText(text, query) {
     return `<p>${highlightedText}</p>`;
 }
 
-function displayBarChart(similarities) {
-    const svg = d3.select("#barChart"),
-          margin = {top: 20, right: 20, bottom: 30, left: 40},
-          width = +svg.attr("width") - margin.left - margin.right,
-          height 
