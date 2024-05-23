@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Semantic Search Visualization</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Semantic Search in Elasticsearch</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="index.html">Elasticsearch</a></li>
+                <li><a href="#">MongoDB</a></li>
+                <li><a href="#">Cassandra</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <aside>
+            <ul>
+                <li><a href="sharding.html">Sharding Concepts</a></li>
+                <li><a href="semantic-search.html">Semantic Search</a></li>
+                <li><a href="#">Indexing</a></li>
+                <li><a href="#">Queries</a></li>
+                <li><a href="#">Aggregations</a></li>
+            </ul>
+        </aside>
+        <section>
+            <h2>Interactive Semantic Search Demo</h2>
+            <p>Enter a paragraph and a query to see how semantic search works in real-time:</p>
+            <textarea id="paragraphInput" placeholder="Enter your paragraph" rows="5" cols="50"></textarea>
+            <input type="text" id="queryInput" placeholder="Enter your search query">
+            <button id="searchBtn">Search</button>
+            <div id="visualization" class="semantic-visualization">
+                <div class="step" id="step1">
+                    <h3>Query</h3>
+                    <p id="queryText"></p>
+                </div>
+                <div class="step" id="step2">
+                    <h3>Transform into Embedding</h3>
+                    <p id="embeddingText"></p>
+                </div>
+                <div class="step" id="step3">
+                    <h3>Cosine Similarity</h3>
+                    <p id="similarityText"></p>
+                    <svg id="barChart" width="400" height="200"></svg>
+                </div>
+                <div class="step" id="step4">
+                    <h3>Results</h3>
+                    <p id="finalResults"></p>
+                </div>
+                <div class="step" id="step5">
+                    <h3>Word Cloud</h3>
+                    <div id="wordCloud"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NoSQL Internals. All rights reserved.</p>
+    </footer>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

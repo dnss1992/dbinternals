@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Elasticsearch Sharding Concepts</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Elasticsearch Sharding Concepts</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="index.html">Elasticsearch</a></li>
+                <li><a href="#">MongoDB</a></li>
+                <li><a href="#">Cassandra</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <aside>
+            <ul>
+                <li><a href="sharding.html">Sharding Concepts</a></li>
+                <li><a href="#">Indexing</a></li>
+                <li><a href="#">Queries</a></li>
+                <li><a href="#">Aggregations</a></li>
+            </ul>
+        </aside>
+        <section>
+            <button id="createIndexBtn">Create Index 'test' with 10 Documents</button>
+            <button id="addDocBtn">Add Document</button>
+            <button id="removeDocBtn">Remove Document</button>
+            <div class="flowchart">
+                <div class="box" id="index">Elasticsearch Index
+                    <div class="tooltip">The main container for your data</div>
+                </div>
+                <div class="line"></div>
+                <div class="row">
+                    <div class="box" id="primary1">Primary Shard 1
+                        <div class="tooltip">Handles a portion of your data</div>
+                    </div>
+                    <div class="box" id="primary2">Primary Shard 2
+                        <div class="tooltip">Handles a portion of your data</div>
+                    </div>
+                    <div class="box" id="primary3">Primary Shard 3
+                        <div class="tooltip">Handles a portion of your data</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <div class="row">
+                    <div class="box" id="replica1">Replica Shard 1
+                        <div class="tooltip">A copy of Primary Shard 1 for redundancy</div>
+                    </div>
+                    <div class="box" id="replica2">Replica Shard 2
+                        <div class="tooltip">A copy of Primary Shard 2 for redundancy</div>
+                    </div>
+                    <div class="box" id="replica3">Replica Shard 3
+                        <div class="tooltip">A copy of Primary Shard 3 for redundancy</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NoSQL Internals. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>
